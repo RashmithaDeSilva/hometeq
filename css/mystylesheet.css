@@ -1,5 +1,51 @@
 /*External Stylesheet for homteq*/
 
+/* The alert message box */
+.alert {
+	padding: 20px;
+	background-color: #f44336; /* Red */
+	color: white;
+	margin-bottom: 15px;
+}
+  
+/* The close button */
+.closebtn {
+	margin-left: 15px;
+	color: white;
+	font-weight: bold;
+	float: right;
+	font-size: 22px;
+	line-height: 20px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+  
+/* When moving the mouse over the close button */
+.closebtn:hover {
+	color: black;
+}
+
+/* Product part*/
+.mainProdDiv{
+	display: flex;
+	width: 100%;
+	height: 350px;
+	/* border: 1px solid rgb(236, 15, 15); */
+}
+.prodImgDiv{
+	width: 35%;
+	height: 300px;
+	margin: 30px;
+	/* border: 1px solid rgb(15, 29, 224); */
+
+}
+.prodBuyDiv{
+	width: 60%;
+	height: 300px;
+	margin: 30px;
+	/* border: 1px solid rgb(15, 46, 224); */
+}
+
 /*Importing Google Fonts*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One');
@@ -192,7 +238,7 @@ table, th, td
 	border:1px solid #000;
 }
 
-/*table {
+/* table {
   border-collapse: collapse;
   border-radius: 1em;
   overflow: hidden;
@@ -202,7 +248,7 @@ th, td {
   padding: 1em;
   background: #ddd;
   border-bottom: 2px solid white; 
-}*/
+} */
 
 th
 {
@@ -401,32 +447,3 @@ button:hover, #submitbtn:hover, .btn:hover{
 .noBorders{
 	border-right: 1px solid white;
 }
-
-/* The alert message box */
-.alert {
-	padding: 20px;
-	background-color: #f44336; /* Red */
-	color: white;
-	margin-bottom: 15px;
-  }
-  
-  /* The close button */
-  .closebtn {
-	margin-left: 15px;
-	color: white;
-	font-weight: bold;
-	float: right;
-	font-size: 22px;
-	line-height: 20px;
-	cursor: pointer;
-	transition: 0.3s;
-  }
-  
-  /* When moving the mouse over the close button */
-  .closebtn:hover {
-	color: black;
-  }
-
-  /* .mainProdDive{
-
-  } */

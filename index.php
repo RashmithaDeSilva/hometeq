@@ -33,16 +33,18 @@
                 
                 echo "<td style='border: 0px'>";
                     //display product name as contained in the array
-                    echo "<h5>".$arrayp['prodName']."</h5>";
-                    echo "<h6>".$arrayp['prodDescripShort']."</h6>";
+                    echo "<h4>".$arrayp['prodName']."</h4>";
+                    echo "<p>".$arrayp['prodDescripShort']."</p>";
                     echo "<h5>$ ".(int)$arrayp['prodPrice']."</h5>";
                 echo "</td>";
             echo "</tr>";
         }
         
     echo "</table>";
+ 
+    // Close connection
+    mysqli_close($connection); // $connection = null;
 
-    $connection = null;
     include("html/footfile.html"); //include foot layout
     echo"</body>";
 ?>
