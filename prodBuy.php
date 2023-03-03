@@ -6,8 +6,7 @@
     $pageName = "A Smart Buy Fro A Smart Home";
     include ("html/headfile.html");
     echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/mystylesheet.css\">";
-    echo "<title>".$pageName."</title>";
-
+    
     echo "<body>";
     echo "<h4>".$pageName."</h4>";
 
@@ -29,7 +28,7 @@
     $prodImg = "";
     $prodDescrip = "";
     $prodPrice = "";
-    $prodQty = "";
+    $prodQty = 0;
 
     if($resultSet) {
         // mysqli_num_rows($resultSet);
@@ -41,7 +40,10 @@
         $prodQty = $recode['prodQuantity'];
     }
 
-    echo "<p>Selected product ID : $prodID</p>";
+    // Set title
+    echo "<title>".$prodName."</title>";
+
+    //echo "<p>Selected product ID : $prodID</p>";
     echo "
         <div class=\"mainProdDiv\">
             
@@ -61,6 +63,20 @@
             
                 <p><b>Number to be purchased : </b></p>
                 
+                <!-- create form made of one text field and one button for user to enter quantity
+                the value entered in the form will be posted to the basket.php to be processed -->
+                <form action=basket.php method=post>
+
+                    <!-- <input type='text' name='p_quantity' size=5 maxlength=3> -->
+    "; 
+    option();
+    echo "
+                    <input type='submit' name='submitbtn' value='ADD TO BASKET' id='submitbtn'>
+                    
+                    <!-- pass the product id to the next page basket.php as a hidden value -->
+                    <input type='hidden' name='h_prodid' value={$prodID}>
+                    
+                </form>
             </div>
 
         </div>
@@ -72,4 +88,15 @@
     //include foot layout
     include("html/footfile.html");
     echo"</body>";
+    
+    // Option function
+    function option() {
+        echo "<select name='p_quantity'>";
+            for($i=0;$i<$GLOBALS['prodQty'];$i++) {
+                $x = $i+1;
+                echo "<option value='{$x}'>$x</option>";
+            }
+        echo "</select>";
+    }
+
 ?>

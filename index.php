@@ -5,7 +5,7 @@
     $pageName = "Make Your Home Smart";
     include ("html/headfile.html");
     echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/mystylesheet.css\">";
-    echo "<title>".$pageName."</title>";
+    echo "<title>Homteq</title>";
 
     echo "<body>";
     echo "<h4>".$pageName."</h4>";
